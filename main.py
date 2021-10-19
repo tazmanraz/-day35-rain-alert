@@ -27,7 +27,6 @@ weather_params = {
 }
 
 response = requests.get(OWM_Endpoint, params = weather_params)
-# response = requests.get(url="https://api.openweathermap.org/data/2.5/onecall?lat=43.653225&lon=-79.383186&exclude=&appid=c7e797020eac4a34730fcbcbf5a27c2a")
 response.raise_for_status()
 
 weather_data =response.json()
